@@ -2,7 +2,7 @@ topFilms = [
     "The Godfather",
     "The Shawshank Redemption",
     "Schindler's List",
-    "Raging Bull",
+    "Raging Bull", 
     "Casablanca",
     "Citizen Kane",
     "Gone with the Wind",
@@ -32,4 +32,16 @@ document.querySelector(".film9-naam").innerHTML = topFilms[8];
 document.querySelector(".film10-ranking").innerHTML = 10;
 document.querySelector(".film10-naam").innerHTML = topFilms[9];
 
+function kiesFavorieteFilm(){
+    strnaam=prompt("wat is jouw favoriete film?");
 
+    console.log(topFilms[strnaam-1]);
+
+    if(strnaam =>11){
+      alert("nee sorry dat lukt niet")
+    }
+
+document.querySelector(".film"+strnaam+"-naam").style.backgroundColor ="blue";
+document.querySelector(".film"+strnaam+"-naam").style.color="white";
+
+}

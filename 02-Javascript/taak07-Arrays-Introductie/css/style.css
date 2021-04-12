@@ -1,5 +1,6 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: darkcyan;
 }
 
 .container{
@@ -31,4 +32,4 @@ button{
     color: darkblue;
     background-color: lightskyblue;
     border: 5px solid blue; 
-}
+} 
