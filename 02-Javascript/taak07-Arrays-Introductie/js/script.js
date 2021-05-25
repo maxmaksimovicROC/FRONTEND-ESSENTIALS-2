@@ -7,3 +7,4 @@ document.getElementById("2").innerHTML = films;
 var muziek= ["Samantha/dave","into you/tamia","buy you a drink/t-pain"];
 document.getElementById("3").innerHTML = muziek;
 
+ 
