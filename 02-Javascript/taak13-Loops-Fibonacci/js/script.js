@@ -5,7 +5,4 @@ for(i = 1; i < 100; i++) {
     a = b;
     b = f;
     console.log(f)
-    if (i ==<89)) {
-       break 
-    }
 }
