@@ -8,7 +8,7 @@ arrInputPosities = [];      //array van input posities
 arrCodewordPosities = [];   //array van codeword posities
 arrOutputPosities = [];     //array van output posities
 
-//Zet een string om naar een array met posities
+//Zet een string om naar een array met posities 
 function stringNaarPosities(str){
     outputArray = [];
     for (let i = 0; i < str.length; i++){
@@ -25,8 +25,17 @@ function stringNaarPosities(str){
 
 //Zet een array met posities om naar een string
 function positiesNaarString(arr){
-    var outputString = "";
-    //TODO: opdracht 1
+    var outputString = ""; 
+    for (let i = 0; i < arr.length ; i++) {
+
+
+        for (let j = 0; j < strAlfabet.length; j++) {
+            
+           outputstring += j;
+        }
+        
+    }
+    console.log("berekende posities:" + outputArray.toString())
     return outputString;
 }
 
