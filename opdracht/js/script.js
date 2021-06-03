@@ -28,14 +28,17 @@ function positiesNaarString(arr){
     var outputString = ""; 
     for (let i = 0; i < arr.length ; i++) {
 
+        let steen = arr[i];
 
-        for (let j = 0; j < strAlfabet.length; j++) {
+        let hout = strAlfabet[steen];
+        
+        for (let j = 0; j < hout.length; j++) {
             
-           outputstring += j;
+           outputstring  += hout;
         }
         
     }
-    console.log("berekende posities:" + outputArray.toString())
+    
     return outputString;
 }
 
@@ -51,8 +54,16 @@ function vermenigvuldigCodeword(strInput, strCodeword){
     var intMod = inputLength % codewordLength; //het aantal letters dat overblijft die nog moeten worden aangevuld
 
     //TODO: opdracht 2
+    for (let i = 0; i < intDiv; i++) {
+        outputString += outputString + strCodeword;
+        
+    }
+    for (let i = 0; i < intMod; i++) {
+        outputString += strCodeword[i];
+        
+    }
 
-    // console.log("Codeword full: " + outputString);
+    console.log("Codeword full: " + outputString);
     return outputString;
 }
 
@@ -80,11 +91,32 @@ function versleutel(){
     }
 
 
-    // console.log("versleuteld bericht: " + positiesNaarString(outputArray));
-    // document.querySelector("#output").value = positiesNaarString(outputArray);
+    console.log("versleuteld bericht: " + positiesNaarString(outputArray));
+    document.querySelector("#output").value = positiesNaarString(outputArray);
     strCodewordFull = [];
 }
 
-function ontsleutel(){
+function ontsleutel() {
     //TODO: opdracht 3
+    strInput = document.querySelector("#input").value;
+    strCodewoord = document.querySelector("#codewoord").value;
+
+    console.log("input: " + strInput);
+    console.log("codewoord: " + strCodewoord);
+
+    strCodewoordFull = vermenigvuldigCodewoord(strInput, strCodewoord);
+    arrCodewoordPosities = stringNaarPosities(strCodewoordFull);
+    arrInputPosities = stringNaarPosities(strInput);
+
+    positiesNaarString(arrInputPosities);
+
+    outputArray = [];
+    for (let i = 0; i < arrInputPosities.length; i++) {
+        if (arrInputPosities[i] - arrCodewoordPosities[i] < 0)
+            outputArray.push((arrInputPosities[i] - arrCodewoordPosities[i]) + strAlfabet.length);
+        else
+            outputArray.push(arrInputPosities[i] - arrCodewoordPosities[i]);
+    }
+    document.querySelector("#output").value = positiesNaarString(outputArray);
+    strCodewoordFull = [];
 }
