@@ -53,7 +53,7 @@ function vermenigvuldigCodeword(strInput, strCodeword){
             outputString += strCodeword;
     }
     for (let i = 0; i < intMod; i++) {
-        outputString += strCodeword[n];
+        outputString += strCodeword[i];
     }   
     console.log("Codeword full: " + outputString);
     return outputString;
